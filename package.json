@@ -1,0 +1,12 @@
+{
+  "name": "deploy-react-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:client": "cd client && npm run build",
+    "build:infra": "cd infra && npm run cdk synth",
+    "deploy:infra": "cd infra && npm run cdk deploy",
+    "deploy": "npm run build:client && npm run deploy:infra"
+  }
+}
